@@ -70,3 +70,5 @@ showOne() - returns News item (title & content) with an image array storing the 
 
 3. Implementation decisions
 I have decided to create a single object that will point to both image's 120x120 and 800x800 path. By doing so we will upload two variations of the same image but the data will be encapuslated into a single object instead of creating two identical ones with small difference in the path's value. I have decided to generate a random name for the newly uploaded images and their orignal extenstion. In order to avoid duplication a 'large' prefix is added to the 800x800 images.
+
+As a WYSIWYG feature I have chosen tinyMCE from all the options available because it required no installation just inserting a JS snippet into the template and define the HTML element we want to target.
