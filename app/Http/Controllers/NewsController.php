@@ -175,4 +175,19 @@ class NewsController extends Controller
 
         return redirect('news')->with('success', 'News post is successfully deleted');
     }
+
+    public function showAll()
+    {
+        $data = News::all()->makeHidden(['content', 'id', 'updated_at']);
+
+        return $data;
+    }
+
+
+    public function showOne($id)
+    {
+        $data = News::with('images')->findOrFail($id)->makeHidden(['content', 'id','updated_at']);
+
+        return $data;
+    }
 }

@@ -15,10 +15,7 @@
 //    return view('welcome');
 //});
 //
-//Route::get('news', 'NewsController@showAll');
-//
-//
-//
-//Route::get('news/{item}', 'NewsController@showOne');
+Route::get('newslist', 'NewsController@showAll');
+Route::get('newslist/{item}', 'NewsController@showOne');
 
 Route::resource('news', 'NewsController');
