@@ -61,15 +61,15 @@ All the logic could be found in /app/Http/Controllers/NewsController
 Method - Operation<br />
 index() - Displays all the data<br />
 create() - Redirects to the create News object template<br />
-store() - Creates News object
-show() - Displays a single object data into a template
-edit() - Redirects to the selected News object update template
+store() - Creates News object<br />
+show() - Displays a single object data into a template<br />
+edit() - Redirects to the selected News object update template<br />
 update() - Updates the data for the selected News object
-destroy() - Deletes selected object
-showAll() - returns News List (title & date inserted) in JSON
-showOne() - returns News item (title & content) with an image array storing the relevant thumbnails in JSON
+destroy() - Deletes selected object<br />
+showAll() - returns News List (title & date inserted) in JSON<br />
+showOne() - returns News item (title & content) with an image array storing the relevant thumbnails in JSON<br />
 
-3. Implementation decisions
-I have decided to create a single object that will point to both image's 120x120 and 800x800 path. By doing so we will upload two variations of the same image but the data will be encapuslated into a single object instead of creating two identical ones with small difference in the path's value. I have decided to generate a random name for the newly uploaded images and their orignal extenstion. In order to avoid duplication a 'large' prefix is added to the 800x800 images.
+3. Implementation decisions<br />
+I have decided to create a single object that will point to both image's 120x120 and 800x800 path. By doing so we will upload two variations of the same image but the data will be encapuslated into a single object instead of creating two identical ones with small difference in the path's value. I have decided to generate a random name for the newly uploaded images and their orignal extenstion. In order to avoid duplication a 'large' prefix is added to the 800x800 images.<br />
 
 As a WYSIWYG editor I have chosen tinyMCE from all the options available because it required literally no installation and configuration just inserting a JS snippet into the template and define the HTML element we want to target.
