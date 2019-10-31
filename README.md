@@ -38,7 +38,7 @@ News item (title & content) with an image array storing the relevant thumbnails
 
 # Implementation
 1. Created models for News and Image objects.
-News object:
+News object:<br />
 
 id": 10
 "title": "Example title"
@@ -46,7 +46,7 @@ id": 10
 "created_at": "2019-10-30 17:10:36"
 "updated_at": "2019-10-30 17:10:36"
 
-Image object
+Image object<br />
 id": 10
 "news_id": "10"
 "name_logo": "path to 120x120 image"
