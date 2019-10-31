@@ -37,22 +37,22 @@ News List (title & date inserted)
 News item (title & content) with an image array storing the relevant thumbnails
 
 # Implementation
-1. Created models for News and Image objects.
+1. Created models for News and Image objects.<br />
 News object:<br />
 
-id": 10
-"title": "Example title"
-"content": "Some content"
-"created_at": "2019-10-30 17:10:36"
-"updated_at": "2019-10-30 17:10:36"
+id": 10<br />
+"title": "Example title"<br />
+"content": "Some content"<br />
+"created_at": "2019-10-30 17:10:36"<br />
+"updated_at": "2019-10-30 17:10:36"<br />
 
 Image object<br />
-id": 10
-"news_id": "10"
-"name_logo": "path to 120x120 image"
-"name_large": "path to 800x800 image"
-"created_at": "2019-10-30 17:10:36"
-"updated_at": "2019-10-30 17:10:36"
+id": 10<br />
+"news_id": "10"<br />
+"name_logo": "path to 120x120 image"<br />
+"name_large": "path to 800x800 image"<br />
+"created_at": "2019-10-30 17:10:36"<br />
+"updated_at": "2019-10-30 17:10:36"<br />
 
 2. CRUD design choices
 <br />
