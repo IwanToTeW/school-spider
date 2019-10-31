@@ -7,6 +7,7 @@ use App\News;
 use DateTime;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManagerStatic as ImageResize;
+use Mews\Purifier\Purifier;
 
 class NewsController extends Controller
 {
@@ -18,9 +19,7 @@ class NewsController extends Controller
     public function index()
     {
         $data = News::latest()->paginate(5);
-//        $data = News::all();
 
-//        dd($data);
         return view('index', compact('data'))
             ->with('i', (request()->input('page', 1) - 1) * 5);    }
 
@@ -47,10 +46,10 @@ class NewsController extends Controller
             'text'  =>  'required',
             'images'    =>  'required'
         ]);
-
+        $purifiedContent = clean($request->text);
         $formData = [
             'title' => $request->title,
-            'content' => $request->text,
+            'content' => $purifiedContent,
         ];
 
         $news = News::create($formData);
@@ -94,7 +93,7 @@ class NewsController extends Controller
     {
         $data = News::findOrFail($id);
         $images = $data->images;
-//        dd($images);
+
         return view('view', compact('data', 'images'));
     }
 
@@ -125,10 +124,10 @@ class NewsController extends Controller
             'title'    =>  'required',
             'text'  =>  'required',
         ]);
-
+        $purifiedContent = clean($request->text);
         $formData = [
             'title' => $request->title,
-            'content' => $request->text,
+            'content' => $purifiedContent,
         ];
 
         News::whereId($id)->update($formData);
