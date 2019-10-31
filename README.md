@@ -55,11 +55,12 @@ id": 10
 "updated_at": "2019-10-30 17:10:36"
 
 2. CRUD design choices
+<br />
 All the logic could be found in /app/Http/Controllers/NewsController
 
-Method - Operation
-index() - Displays all the data
-create() - Redirects to the create News object template
+Method - Operation<br />
+index() - Displays all the data<br />
+create() - Redirects to the create News object template<br />
 store() - Creates News object
 show() - Displays a single object data into a template
 edit() - Redirects to the selected News object update template
