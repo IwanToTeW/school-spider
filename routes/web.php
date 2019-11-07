@@ -11,11 +11,18 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-//
+Route::get('/', function () {
+    return view('upload');
+});
+
 Route::get('newslist', 'NewsController@showAll');
 Route::get('newslist/{item}', 'NewsController@showOne');
 
 Route::resource('news', 'NewsController');
+
+Route::post('videos', function (){
+
+    request()->file('video')->store('videos');
+
+    return back();
+});

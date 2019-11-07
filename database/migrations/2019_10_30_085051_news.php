@@ -17,7 +17,6 @@ class News extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('content');
-            $table->string('images');
             $table->timestamps();
         });
     }
